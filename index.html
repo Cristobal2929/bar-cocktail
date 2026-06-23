@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bar El Refugio – Cócteles artesanales y ambiente íntimo</title>
+
+  <!-- Google Fonts: Playfair Display (display) + Montserrat (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #6a0dad;   /* purple */
+      --color-bg: #f9f5ff;
+      --color-text: #2d2d2d;
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--color-primary); text-decoration: none; }
+    a:focus-visible { outline: 2px dashed var(--color-primary); outline-offset: 2px; }
+
+    header {
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+      background: url('https://images.unsplash.com/photo-1551022379-8f0e6d6c5d5c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      margin: 0 0 .5rem;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: .75rem 1.5rem;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: .4rem;
+      font-weight: 500;
+      transition: background .3s;
+    }
+    .cta-btn:hover,
+    .cta-btn:focus-visible {
+      background: #5a0c9e;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: .75rem;
+      color: var(--color-primary);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: .6rem;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+      transition: transform .2s;
+    }
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: 0 0 .5rem;
+    }
+
+    .card-text {
+      font-size: .95rem;
+      color: #555;
+    }
+
+    footer {
+      background: #2d2d2d;
+      color: #ddd;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: .9rem;
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero-content">
+    <h1 class="hero-title">Bar El Refugio</h1>
+    <p class="hero-tagline">Cócteles artesanales, música en vivo y el rincón perfecto para desconectar.</p>
+    <a href="#menu" class="cta-btn">Ver nuestro menú</a>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="section">
+    <h2 class="section-title">Sobre nosotros</h2>
+    <p>En El Refugio, cada trago cuenta una historia. Nuestro barman, Ana, combina ingredientes locales y técnicas clásicas para crear experiencias sensoriales únicas. Ven y descubre por qué somos el punto de encuentro favorito de la ciudad.</p>
+  </section>
+
+  <section id="menu" class="section">
+    <h2 class="section-title">Nuestro menú</h2>
+    <div class="grid grid-2">
+      <article class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1589308078055-6c5c5b6c5e5c?auto=format&fit=crop&w=800&q=80" alt="Cóctel 'Noche de Luna'">
+        <div class="card-body">
+          <h3 class="card-title">Noche de Luna</h3>
+          <p class="card-text">Ginebra, licor de violeta, jugo de limón y una espuma de coco. Ideal para una charla bajo la luz tenue.</p>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Cóctel 'Fuego del Sur'">
+        <div class="card-body">
+          <h3 class="card-title">Fuego del Sur</h3>
+          <p class="card-text">Ron añejo, chile habanero, piña fresca y un toque de miel. Calienta la noche con su picante delicado.</p>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1510626176961-4b57d0d5c5a5?auto=format&fit=crop&w=800&q=80" alt="Cóctel 'Amanecer Tropical'">
+        <div class="card-body">
+          <h3 class="card-title">Amanecer Tropical</h3>
+          <p class="card-text">Tequila, maracuyá, jugo de naranja y una ramita de romero. Refrescante como la brisa del mar.</p>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1551022379-8f0e6d6c5d5c?auto=format&fit=crop&w=800&q=80" alt="Cóctel 'Café Nocturno'">
+        <div class="card-body">
+          <h3 class="card-title">Café Nocturno</h3>
+          <p class="card-text">Whisky, licor de café, crema batida y cacao amargo. Perfecto para cerrar la velada.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Reserva tu mesa</h2>
+    <p>¿Quieres una mesa para una ocasión especial? Llámanos al <a href="tel:+34123456789">+34 123 456 789</a> o envíanos un mensaje a <a href="mailto:reservas@elrefugio.com">reservas@elrefugio.com</a>. ¡Te esperamos!</p>
+  </section>
+</main>
+
+<footer>
+  © 2026 Bar El Refugio – Todos los derechos reservados.
+</footer>
+
+<script>
+  // Simple smooth scroll for anchor links (respects reduced motion)
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>
